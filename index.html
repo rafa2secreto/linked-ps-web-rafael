@@ -4,16 +4,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <style>
+        .container {
+            display: flex;
+        }
+        .row{
+            flex-direction: row;
+        }
+        .column{
+            flex-direction: column;
+        }
+        .center{
+            align-items: center;
+            justify-content: center;
+        }
+        .marinho{
+            background-color: #004346;
+            color: #ffffff;
+        }
+        #cabecalho{
+            justify-content: space-between;
+        }
+        #paginaDois{
+            width: 60%;
+        }
+        #rodape{
+            justify-content: space-evenly;
+        }
+        body{
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        ul{
+            list-style-type: none;
+        }
+    </style>
+
     <title>Psicologos</title>
 </head>
 
 <body>
-    <header>
+    <header class="container row" id="cabecalho">
         <section>
             <h2>Nome / Logo</h2>
         </section>
         <nav>
-            <ul>
+            <ul class="container row">
                 <li>Início</li>
                 <li>Sobre</li>
                 <li>Serviços</li>
@@ -22,8 +58,9 @@
         </nav>
     </header>
     <hr>
-    <main>
-        <section id="paginaUm">
+
+    <main class="container column" id="corpo">
+        <section clas="container row" id="paginaUm">
             <article>
                 <h2>Consultório de psicologia e psicoterapia</h2>
                 <h1>Lorem Ipsum.</h1>
@@ -31,7 +68,7 @@
                     quisquam dignissimos obcaecati inventore maxime repellat aperiam praesentium debitis dolor est? Nemo
                     quidem enim nam.</p>
                 <div>
-                    <button>AGENDAR</button>
+                    <button class="marinho">AGENDAR</button>
                     <button>SAIBA MAIS</button>
                 </div>
             </article>
@@ -43,7 +80,7 @@
             </aside>
         </section>
 
-        <section id="paginaDois">
+        <section class="container column center marinho" id="paginaDois">
             <header>
                 <h1>Nossos Serviços.</h1>
                 <h3>A qualidade que traz toda diferença para o paciente.</h3>
@@ -53,18 +90,18 @@
                 Adipisci voluptate possimus esse earum nostrum blanditiis doloribus laudantium exercitationem necessitatibus cumque! Amet facilis id, aliquam debitis labore eos libero modi, temporibus veritatis perferendis, animi dignissimos reiciendis dolorem nihil deleniti.</p>
         </section>
 
-        <section id="paginaTres">
+        <section class="container column" id="paginaTres">
             <header>
                 <h1>Horário de Atendimento.</h1>
                 <h3>Estamos disponíveis para agendamento de consultas e visitas.</h3>
                 <hr>
             </header>
-            <article>
+            <article class="container row">
                 <figure>
                     <img src="" alt="">
                     <figcaption>Fig1. - Trulli, Puglia, Italy.</figcaption>
                 </figure>
-                <table>
+                <table class="marinho">
                     <tr>
                         <td>Segunda - Sexta</td>
                         <td>8:00 - 17:00</td>
@@ -81,13 +118,11 @@
             </article>
         </section>
         
-        <section id="paginaQuatro">
-            <header>
+        <section class="container row background-color" id="paginaQuatro">
+            <section class="container column">
                 <h1>Feedbacks.</h1>
                 <h3>Quem conhece, confia.</h3>
                 <hr>
-            </header>
-            <section>
                 <ul>
                     <li><article>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam minima minus doloremque quibusdam! Itaque sequi sed distinctio, ipsa architecto, atque nostrum in culpa debitis non ducimus similique sunt tempore mollitia?</p>
@@ -102,16 +137,16 @@
                         <p>- Cliente 3, 2026</p>
                     </article></li>
                 </ul>
-                <figure>
-                    <img src="" alt="">
-                    <figcaption>Fig1. - Trulli, Puglia, Italy.</figcaption>
-                </figure>
             </section>
+            <figure>
+                <img src="" alt="">
+                <figcaption>Fig1. - Trulli, Puglia, Italy.</figcaption>
+            </figure>
         </section>
         
-        <section id="paginaCinco">
-            <article>
-                <section>
+        <section class="container column" id="paginaCinco">
+            <article class="container row">
+                <section class="marinho">
                     <p>Visite-nos</p>
                     <p>ENDEREÇO:</p>
                     <p>Rua, Número</p>
@@ -130,17 +165,17 @@
                     <h3>Ficou com alguma dúvida? Converse diretamente conosco!</h3>
                 </div>
                 <form action="post">
-                    <label for="">Nome:<input type="text" maxlength="120" required></label>
-                    <label for="">Email:<input type="email" maxlength="320" required></label>
-                    <label for="">Obs:<input type="text" maxlength="500" required></label>
+                    <div class="marinho"><label for="">Nome:<input type="text" maxlength="120" required></label></div>
+                    <div class="marinho"><label for="">Email:<input type="email" maxlength="320" required></label></div>
+                    <div class="marinho"><label for="">Obs:<input type="text" maxlength="500" required></label></div>
                     <input type="submit" name="Enviar" id="botaoEnviar">
                 </form>
             </section>
         </section>
     </main>
 
-    <footer>
-        <article>
+    <footer class="container row marinho" id="rodape">
+        <article class="container column">
             <h3>EMPRESA:</h3>
             <ul>
                 <li>Facebook</li>
@@ -148,7 +183,7 @@
                 <li>LinkedIn</li>
             </ul>
         </article>
-        <article>
+        <article class="container column">
             <h3>ACESSO RÁPIDO:</h3>
             <ul>
                 <li>Início</li>
@@ -158,7 +193,7 @@
                 <li>Endereço</li>
             </ul>
         </article>
-        <article>
+        <article class="container column">
             <h3>SERVIÇOS:</h3>
             <ul>
                 <li>Serviço 1</li>
@@ -166,7 +201,7 @@
                 <li>Serviço 3</li>
             </ul>
         </article>
-        <article>
+        <article class="container column">
             <h3>CONTATO:</h3>
             <ul>
                 <li>Rua, Número</li>
