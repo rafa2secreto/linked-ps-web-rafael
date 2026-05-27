@@ -4,75 +4,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <style>
-        .container {
-            display: flex;
-        }
-        .row{
-            flex-direction: row;
-        }
-        .column{
-            flex-direction: column;
-        }
-        .center{
-            align-items: center;
-            justify-content: center;
-        }
-        .marinho{
-            background-color: #004346;
-            color: #ffffff;
-        }
-        #cabecalho{
-            justify-content: space-between;
-        }
-        #paginaDois{
-            width: 60%;
-        }
-        #rodape{
-            justify-content: space-evenly;
-        }
-        body{
-            font-family: Georgia, 'Times New Roman', Times, serif;
-        }
-        ul{
-            list-style-type: none;
-        }
-    </style>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
-    <title>Psicologos</title>
+    <title>Landing page Psicologos</title>
 </head>
 
 <body>
-    <header class="container row" id="cabecalho">
-        <section>
-            <h2>Nome / Logo</h2>
+    <header>
+        <section class="flex justify-between mx-6 my-3 mt-3">
+            <section>
+                <h2 class="text-2xl">Nome / Logo</h2>
+            </section>
+            <nav>
+                <ul class="flex gap-10 text-2xl">
+                    <li>Início</li>
+                    <li>Sobre</li>
+                    <li>Serviços</li>
+                    <li>Contato </li>
+                </ul>
+            </nav>
         </section>
-        <nav>
-            <ul class="container row">
-                <li>Início</li>
-                <li>Sobre</li>
-                <li>Serviços</li>
-                <li>Contato </li>
-            </ul>
-        </nav>
     </header>
     <hr>
 
-    <main class="container column" id="corpo">
-        <section clas="container row" id="paginaUm">
-            <article>
-                <h2>Consultório de psicologia e psicoterapia</h2>
-                <h1>Lorem Ipsum.</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem neque, eos quo impedit qui vel
-                    quisquam dignissimos obcaecati inventore maxime repellat aperiam praesentium debitis dolor est? Nemo
-                    quidem enim nam.</p>
+    <main class="flex flex-col">
+        <section class="flex md:h-screen">
+            <article class="flex flex-col  gap-32 p-8 md:w-1/2">
                 <div>
-                    <button class="marinho">AGENDAR</button>
-                    <button>SAIBA MAIS</button>
+                    <h2 class="text-2xl">Consultório de psicologia e psicoterapia</h2>
+                </div>
+                <div class="flex flex-col gap-6 ml-4">
+                    <h1 class="text-4xl font-bold">Lorem Ipsum.</h1>
+                    <p class="text-xl mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem neque,
+                        eos quo impedit qui vel
+                        quisquam dignissimos obcaecati inventore maxime repellat aperiam praesentium debitis dolor est?
+                        Nemo
+                        quidem enim nam.</p>
+                    <div class="flex gap-8">
+                        <button class="text-2xl rounded-2xl p-2 bg-teal-900 text-white">AGENDAR</button>
+                        <button class="text-2xl rounded-2xl p-2 outline-solid text-teal-900">SAIBA MAIS</button>
+                    </div>
                 </div>
             </article>
-            <aside>
+            <aside class="md:w-1/2">
                 <figure>
                     <img src="" alt="">
                     <figcaption>Fig1. - Trulli, Puglia, Italy.</figcaption>
@@ -80,112 +54,154 @@
             </aside>
         </section>
 
-        <section class="container column center marinho" id="paginaDois">
-            <header>
-                <h1>Nossos Serviços.</h1>
-                <h3>A qualidade que traz toda diferença para o paciente.</h3>
+        <section class="flex flex-col p-32 bg-teal-900 text-white text-center  md:h-screen">
+            <header class="flex justify-center">
+                <div class="flex flex-col">
+                    <h1 class="text-6xl">Nossos Serviços.</h1>
+                    <h3 class="text-xl p-4">Qualidades que trazem toda diferença para o paciente.</h3>
+                </div>
                 <hr>
             </header>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi, ex dignissimos, dolorem nulla tempora fugit qui itaque iusto soluta tenetur assumenda error vitae expedita quaerat amet blanditiis! Ipsam, modi quibusdam.
-                Adipisci voluptate possimus esse earum nostrum blanditiis doloribus laudantium exercitationem necessitatibus cumque! Amet facilis id, aliquam debitis labore eos libero modi, temporibus veritatis perferendis, animi dignissimos reiciendis dolorem nihil deleniti.</p>
+            <p class="text-2xl p-8">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi, ex dignissimos,
+                dolorem nulla tempora fugit qui itaque iusto soluta tenetur assumenda error vitae expedita quaerat amet
+                blanditiis! Ipsam, modi quibusdam.
+                Adipisci voluptate possimus esse earum nostrum blanditiis doloribus laudantium exercitationem
+                necessitatibus cumque! Amet facilis id, aliquam debitis labore eos libero modi, temporibus veritatis
+                perferendis, animi dignissimos reiciendis dolorem nihil deleniti.</p>
         </section>
 
-        <section class="container column" id="paginaTres">
-            <header>
-                <h1>Horário de Atendimento.</h1>
-                <h3>Estamos disponíveis para agendamento de consultas e visitas.</h3>
-                <hr>
-            </header>
-            <article class="container row">
-                <figure>
-                    <img src="" alt="">
-                    <figcaption>Fig1. - Trulli, Puglia, Italy.</figcaption>
-                </figure>
-                <table class="marinho">
-                    <tr>
-                        <td>Segunda - Sexta</td>
-                        <td>8:00 - 17:00</td>
-                    </tr>
-                    <tr>
-                        <td>Sábado</td>
-                        <td>10:00 - 14:00</td>
-                    </tr>
-                    <tr>
-                        <td>Domingo</td>
-                        <td>Fechado</td>
-                    </tr>
-                </table>
-            </article>
+        <section class="flex justify-center p-16 text-teal-900  md:h-screen">
+            <div class="flex flex-col h-full">
+                <header class="flex justify-center">
+                    <div class="flex flex-col text-center">
+                        <h1 class="text-6xl">Horário de Atendimento.</h1>
+                        <h3 class="text-xl p-2">Estamos disponíveis para agendamento de consultas e visitas.</h3>
+                    </div>
+                    <hr>
+                </header>
+                <div class="flex justify-center h-6/10">
+                    <article class="flex flex-col justify-center ring rounded-xl m-4 p-6 py-6 w-full">
+                        <div class="flex justify-center p-6 py-6 h-full w-full">
+                            <figure class="flex flex-col justify-center w-full">
+                                <img src="" alt="">
+                                <figcaption>Fig1. - Trulli, Puglia, Italy.</figcaption>
+                            </figure>
+                            <article class="flex p-4 py-8 bg-teal-900 text-white w-full rounded-xl">
+                                <div class="flex flex-col justify-between w-5/10">
+                                    <p>Segunda - Sexta</p>
+                                    <p>Sábado</p>
+                                    <p>Domingo</p>
+                                </div>
+                                <div class="flex flex-col justify-between w-5/10">
+                                    <p class="flex justify-end">8:00 - 17:00</p>
+                                    <p class="flex justify-end">10:00 - 14:00</p>
+                                    <p class="flex justify-end">Fechado</p>
+                                </div>
+                            </article>
+                        </div>
+                    </article>
+                </div>
+            </div>
         </section>
-        
-        <section class="container row background-color" id="paginaQuatro">
-            <section class="container column">
-                <h1>Feedbacks.</h1>
-                <h3>Quem conhece, confia.</h3>
-                <hr>
-                <ul>
-                    <li><article>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam minima minus doloremque quibusdam! Itaque sequi sed distinctio, ipsa architecto, atque nostrum in culpa debitis non ducimus similique sunt tempore mollitia?</p>
-                        <p>- Cliente 1, 2026</p>
-                    </article></li>
-                    <li><article>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis provident dolores ad praesentium deserunt molestiae ipsum fugiat at deleniti aspernatur, consequatur consequuntur quis eveniet magni perferendis et quam, aliquam alias!</p>
-                        <p>- Cliente 2, 2026</p>
-                    </article></li>
-                    <li><article>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut expedita quasi quidem adipisci nulla enim veritatis quis qui beatae quia, consequatur, rerum ipsum, quam veniam maxime cumque excepturi molestias ratione?</p>
-                        <p>- Cliente 3, 2026</p>
-                    </article></li>
-                </ul>
+
+        <section class="flex px-12 py-14 bg-teal-900 text-white  md:h-screen">
+            <section class="h-full w-5/10">
+                <div class="flex flex-col h-full">
+                    <h1 class="text-6xl">Feedbacks.</h1>
+                    <h3 class="text-xl py-2">Quem conhece, confia.</h3>
+                    <hr>
+                    <ul class="flex flex-col justify-between list-disc py-12 pl-5 h-full">
+                        <li>
+                            <article>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam minima minus
+                                    doloremque quibusdam! Itaque sequi sed distinctio, ipsa architecto, atque
+                                    nostrum in culpa debitis non ducimus similique sunt tempore mollitia?</p>
+                                <p class="py-4">- Cliente 1, 2026</p>
+                            </article>
+                        </li>
+                        <li>
+                            <article>
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis provident
+                                    dolores ad praesentium deserunt molestiae ipsum fugiat at deleniti aspernatur,
+                                    consequatur consequuntur quis eveniet magni perferendis et quam, aliquam alias!
+                                </p>
+                                <p class="py-4">- Cliente 2, 2026</p>
+                            </article>
+                        </li>
+                        <li>
+                            <article>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut expedita quasi quidem
+                                    adipisci nulla enim veritatis quis qui beatae quia, consequatur, rerum ipsum,
+                                    quam veniam maxime cumque excepturi molestias ratione?</p>
+                                <p class="py-4">- Cliente 3, 2025</p>
+                            </article>
+                        </li>
+                    </ul>
+                </div>
             </section>
-            <figure>
+            <figure class="p-6 rounded-xl h-full w-5/10">
                 <img src="" alt="">
                 <figcaption>Fig1. - Trulli, Puglia, Italy.</figcaption>
             </figure>
         </section>
-        
-        <section class="container column" id="paginaCinco">
-            <article class="container row">
-                <section class="marinho">
-                    <p>Visite-nos</p>
-                    <p>ENDEREÇO:</p>
+
+        <section class="flex flex-col pt-8 px-16 md:h-screen w-full">
+            <article class="flex justify-evenly w-full">
+                <section class="p-8 rounded-xl text-xl bg-teal-900 text-white w-1/4">
+                    <p class="py-2">Visite-nos</p>
+                    <p class="py-2">ENDEREÇO:</p>
                     <p>Rua, Número</p>
                     <p>Bairro</p>
-                    <p>CEP: 40028922</p>
+                    <p class="py-2">CEP: 40028922</p>
                 </section>
-                <figure>
+                <figure class="rounded-xl outline-solid w-4/10">
                     <img src="" alt="">
                     <figcaption>Fig1. - Trulli, Puglia, Italy.</figcaption>
                 </figure>
             </article>
 
-            <section>
-                <div>
-                    <h2>Formulário de contato</h2>
-                    <h3>Ficou com alguma dúvida? Converse diretamente conosco!</h3>
+            <section class="flex justify-center p-6 h-full">
+                <div class="flex flex-col text-teal-900 m-6 p-4 outline-solid rounded h-full w-6/10">
+                    <header class="flex p-1">
+                        <h2>Formulário de contato</h2>
+                        <h3>Ficou com alguma dúvida? Converse diretamente conosco!</h3>
+                    </header>
+                    <form action="post">
+                        <div class="flex flex-col justify-between mt-4 h-full">
+                            <div class="p-0.5 px-2 rounded-xl bg-teal-900 text-white"><label for="">Nome:<input
+                                        type="text" maxlength="120" required></label>
+                            </div>
+                            <div class="p-0.5 px-2 rounded-xl bg-teal-900 text-white"><label for="">Email:<input
+                                        type="email" maxlength="320" required></label>
+                            </div>
+                            <div class="p-0.5 px-2 rounded-xl bg-teal-900 text-white"><label for="">Obs:<input
+                                        type="text" maxlength="500" required></label>
+                            </div>
+                        </div>
+                        <div class="flex flex-col justify-center md:h-full">
+                            <div class="flex justify-center">
+                                <input type="submit" name="Enviar" id="botaoEnviar"
+                                    class="outline-solid rounded w-1/10">
+                            </div>
+                        </div>
+                    </form>
                 </div>
-                <form action="post">
-                    <div class="marinho"><label for="">Nome:<input type="text" maxlength="120" required></label></div>
-                    <div class="marinho"><label for="">Email:<input type="email" maxlength="320" required></label></div>
-                    <div class="marinho"><label for="">Obs:<input type="text" maxlength="500" required></label></div>
-                    <input type="submit" name="Enviar" id="botaoEnviar">
-                </form>
             </section>
         </section>
     </main>
 
-    <footer class="container row marinho" id="rodape">
-        <article class="container column">
+    <footer class="flex justify-evenly py-4 mt-8 bg-teal-900 text-white text-xl">
+        <article class="flex flex-col gap-4">
             <h3>EMPRESA:</h3>
-            <ul>
+            <ul class="py-1">
                 <li>Facebook</li>
                 <li>Instagram</li>
                 <li>LinkedIn</li>
             </ul>
         </article>
-        <article class="container column">
+        <article class="flex flex-col gap-4">
             <h3>ACESSO RÁPIDO:</h3>
-            <ul>
+            <ul class="py-1">
                 <li>Início</li>
                 <li>Nossos Serviços</li>
                 <li>Contato</li>
@@ -193,17 +209,17 @@
                 <li>Endereço</li>
             </ul>
         </article>
-        <article class="container column">
+        <article class="flex flex-col gap-4">
             <h3>SERVIÇOS:</h3>
-            <ul>
+            <ul class="py-1">
                 <li>Serviço 1</li>
                 <li>Serviço 2</li>
                 <li>Serviço 3</li>
             </ul>
         </article>
-        <article class="container column">
+        <article class="flex flex-col gap-4">
             <h3>CONTATO:</h3>
-            <ul>
+            <ul class="py-1">
                 <li>Rua, Número</li>
                 <li>Bairro</li>
                 <li>+55(01)23456-7890</li>
