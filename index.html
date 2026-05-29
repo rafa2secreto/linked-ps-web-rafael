@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <header class="border-b-1 border-teal-900 bg-white fixed top-0 h-14 w-full">
+    <header class="border-b-1 border-teal-900 bg-white fixed top-0 md:h-14 w-full">
         <section class="flex justify-between mx-6 my-3 mt-3">
             <section>
                 <h2 class="text-2xl">Nome / Logo</h2>
@@ -27,7 +27,7 @@
         </section>
     </header>
 
-    <main class="flex flex-col mt-14 h-full w-full">
+    <main class="flex flex-col mt-14  h-full w-full">
         <section class="flex md:h-[calc(100vh-48px)] md:w-full">
             <article class="flex flex-col  gap-32 p-8 md:w-1/2">
                 <div>
@@ -46,10 +46,10 @@
                     </div>
                 </div>
             </article>
-            <aside class="md:w-1/2">
+            <aside class="md:w-1/2 h-full">
                 <figure class="h-full">
                     <img src="https://clinicasemeia.com.br/wp-content/uploads/2024/09/Psicologia.png"
-                        class="rounded-none h-full" alt="Imagem de uma consulta de terapia.">
+                        class="object-cover object-left h-full" alt="Imagem de uma consulta de terapia.">
                 </figure>
             </aside>
         </section>
@@ -165,11 +165,11 @@
             </figure>
         </section>
 
-        <section class="flex flex-col py-4 px-16 md:h-[calc(100vh-48px)] w-full">
-            <article class="flex justify-evenly w-full">
-                <section class="p-8 rounded-xl text-xl bg-teal-900 text-white w-1/4">
+        <section class="flex flex-col py-4 px-12 md:h-[calc(100vh-48px)] w-full">
+            <article class="flex justify-evenly w-full h-4/10">
+                <section class="p-6 rounded-xl text-xl bg-teal-900 text-white w-1/4">
                     <p class="py-2">Visite-nos</p>
-                    <div class="flex gap-2 py-2">
+                    <div class="flex gap-2 pb-2">
                         <img src="https://img.icons8.com/?size=100&id=xhk7LL9tilrp&format=png&color=000000"
                             alt="Ícone de local" class="max-h-8">
                         <p>ENDEREÇO:</p>
@@ -186,8 +186,8 @@
                 </figure>
             </article>
 
-            <section class="flex justify-center p-6 h-full">
-                <div class="flex flex-col text-teal-900 m-6 p-4 pb-0 outline-solid rounded h-full w-6/10">
+            <section class="flex justify-center px-6 pt-6 pb-2">
+                <div class="flex flex-col text-teal-900 m-6 p-4 pb-0 outline-solid rounded h-14/15 w-6/10">
                     <header class="flex p-1 gap-2">
                         <h2 class="text-xl font-bold pr-2 border-r-1 border--teal-900">Formulário de contato</h2>
                         <h3 class="text-gray-400">Ficou com alguma dúvida? Converse diretamente conosco!</h3>
@@ -205,8 +205,10 @@
                             </div>
                             <div class="flex flex-col justify-center md:h-full">
                                 <div class="flex justify-center">
-                                    <input type="submit" name="Enviar" id="botaoEnviar"
-                                        class="outline-solid p-1 px-2 rounded-xl w-1/10">
+                                    <button type="submit" class="outline-solid p-1 px-2 rounded-xl w-2/10">○
+                                        Enviar</button>
+                                    <!-- <input type="submit" name="Enviar" id="botaoEnviar"
+                                        class="outline-solid p-1 px-2 rounded-xl w-1/10"> -->
                                 </div>
                             </div>
                         </div>
@@ -216,7 +218,7 @@
         </section>
     </main>
 
-    <footer class="flex justify-evenly py-4 mt-4 bg-teal-900 text-white text-xl">
+    <footer class="flex justify-evenly py-4 bg-teal-900 text-white text-xl h-56">
         <article class="flex flex-col gap-4">
             <h3>EMPRESA:</h3>
             <ul class="py-1">
